@@ -10,8 +10,8 @@ module Phonewords
       private
 
       def available_words_file
-        return primary if File.exists? primary
-        return secondary if File.exists? secondary
+        return primary if File.exist? primary
+        return secondary if File.exist? secondary
         raise 'No Dictionary Available'
       end
 
