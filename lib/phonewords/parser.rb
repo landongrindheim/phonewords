@@ -1,3 +1,7 @@
+require_relative "number_conversion"
+require_relative "letter_conversion"
+require_relative "validator"
+
 module Phonewords
   class Parser
     def initialize(input, validator: Validator)
