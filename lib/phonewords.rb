@@ -19,5 +19,3 @@ module Phonewords
 
   at_exit { "bye" }
 end
-
-Phonewords.start
