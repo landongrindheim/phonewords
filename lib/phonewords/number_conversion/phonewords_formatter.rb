@@ -6,27 +6,31 @@ module Phonewords
       end
 
       def call
-        if phonewords_count > 0
+        if phonewords.count > 0
           results
         else
-          no_results_found
+          no_results
         end
       end
 
       private
 
-      def phonewords_count
-        Array(@words).size
+      def phonewords
+        Array(@words).reject(&:empty?).map(&:chomp)
       end
 
       def results
         <<~RESULTS
           The following words match your phone number:
-           * #{Array(@words).join(" * ")}
+           * #{Array(@words).join(separator)}
         RESULTS
       end
 
-      def no_results_found
+      def separator
+        "\n * "
+      end
+
+      def no_results
         "Sorry, no matches were found"
       end
     end
