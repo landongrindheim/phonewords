@@ -43,4 +43,18 @@ class PhoneNumberFormatterTest < Minitest::Test
     result = formatter.call
     assert_equal result, "1234567890123456"
   end
+
+  def test_it_handles_numeric_input
+    integer = 1234567
+    formatter = Phonewords::LetterConversion::PhoneNumberFormatter.new(integer)
+    result = formatter.call
+    assert_equal result, "123-4567"
+  end
+
+  def test_it_returns_an_empty_string_for_nil_input
+    formatter = Phonewords::LetterConversion::PhoneNumberFormatter.new(nil)
+    result = formatter.call
+    assert_equal result, ""
+
+  end
 end

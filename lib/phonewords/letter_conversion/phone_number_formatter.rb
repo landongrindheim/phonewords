@@ -2,7 +2,7 @@ module Phonewords
   module LetterConversion
     class PhoneNumberFormatter
       def initialize(phone_number)
-        @phone_number = phone_number
+        @phone_number = phone_number.to_s
       end
 
       def call
