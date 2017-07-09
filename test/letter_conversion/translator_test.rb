@@ -17,6 +17,12 @@ class TranslatorTest < Minitest::Test
     assert_equal result, "737-3328"
   end
 
+  def test_it_handles_nil_input
+    translator = Phonewords::LetterConversion::Translator.new(letters: nil)
+    result = translator.to_phone_number
+    assert_equal result, ""
+  end
+
   def test_it_delegates_formatting_to_formatter
     mock_formatter_klass = Minitest::Mock.new
     mock_formatter = Minitest::Mock.new

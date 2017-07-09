@@ -2,7 +2,7 @@ module Phonewords
   module LetterConversion
     class Translator
       def initialize(letters:, formatter: PhoneNumberFormatter)
-        @letters = letters
+        @letters = letters.to_s
         @formatter= formatter
       end
 
