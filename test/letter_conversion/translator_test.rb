@@ -3,7 +3,7 @@ require "test_helper"
 class TranslatorTest < Minitest::Test
   def test_it_formats_lowercase_perfect_as_738_3328
     perfect = "perfect"
-    translator = Phonewords::LetterConversion::Translator.new( letters: perfect)
+    translator = Phonewords::LetterConversion::Translator.new(letters: perfect)
     result = translator.to_phone_number
 
     assert_equal result, "737-3328"
@@ -11,7 +11,7 @@ class TranslatorTest < Minitest::Test
 
   def test_it_formats_uppercase_perfect_as_738_3328
     perfect = "PERFECT"
-    translator = Phonewords::LetterConversion::Translator.new( letters: perfect)
+    translator = Phonewords::LetterConversion::Translator.new(letters: perfect)
     result = translator.to_phone_number
 
     assert_equal result, "737-3328"
