@@ -23,4 +23,10 @@ class LookupTest < Minitest::Test
     result = lookup.find_matches
     refute_includes result.map(&:chomp), "words"
   end
+
+  def test_it_raises_NoInputError_if_lacking_input
+    lookup = Phonewords::NumberConversion::Lookup.new(pattern: nil)
+
+    assert_raises(Phonewords::CustomErrors::NoInputError) { lookup.find_matches }
+  end
 end

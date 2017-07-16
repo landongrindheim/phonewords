@@ -1,5 +1,12 @@
 module Phonewords
   module CustomErrors
+    class NoInputError < StandardError
+      def message
+        <<~ERROR
+          Input was expected, but none was given.
+        ERROR
+      end
+    end
     class MixedInputError < StandardError
       def message
         <<~ERROR

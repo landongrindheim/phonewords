@@ -1,3 +1,4 @@
+require_relative "custom_errors"
 require_relative "number_conversion/corpus"
 require_relative "number_conversion/lookup"
 require_relative "number_conversion/pattern_builder"
