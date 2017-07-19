@@ -27,6 +27,6 @@ class LookupTest < Minitest::Test
   def test_it_raises_NoInputError_if_lacking_input
     lookup = Phonewords::NumberConversion::Lookup.new(pattern: nil)
 
-    assert_raises(Phonewords::CustomErrors::NoInputError) { lookup.find_matches }
+    assert_raises(Phonewords::NoInputError) { lookup.find_matches }
   end
 end

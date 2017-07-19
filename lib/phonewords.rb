@@ -1,5 +1,7 @@
-require_relative "phonewords/version"
 require_relative "phonewords/parser"
+require_relative "phonewords/letter_conversion"
+require_relative "phonewords/number_conversion"
+require_relative "phonewords/version"
 
 module Phonewords
   def self.start

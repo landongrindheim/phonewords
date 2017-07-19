@@ -7,7 +7,7 @@ module Phonewords
       end
 
       def find_matches
-        raise CustomErrors::NoInputError unless @pattern
+        raise NoInputError unless @pattern
         @corpus.select { |term| term.match(@pattern) }
       end
     end
