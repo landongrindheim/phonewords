@@ -1,39 +1,41 @@
 # Phonewords
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/phonewords`. To experiment with that code, run `bin/console` for an interactive prompt.
+Phonewords is (at this point) a toy app for translating phone numbers to words, and words to phone numbers.
 
-TODO: Delete this and the text above, and describe your gem
+## Getting Started
 
-## Installation
+Clone the repository  
+  `git clone git://github.com/landongrindheim/phonewords ~/phonewords`  
 
-Add this line to your application's Gemfile:
+From `~/phonewords/` issue `bin/console`. This should start an interactive Ruby console session.  
 
-```ruby
-gem 'phonewords'
+Once you have a prompt, issue `Phonewords.start`. You'll be able to start translating. 🤞 You'll find a meaningful translation for your phone number!  
+
+```Ruby
+ ~/phonewords $ bin/console
+ 2.4.0 :001 > Phonewords.start
+ what would you like to translate?
+ > 7899536368
+ The following words match your phone number:
+  * puzzlement
+
+ > pizzazz
+ 749-9299
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install phonewords
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently, this project is a console app. You can run the console (from ~/phonewords) by issuing `bin/console`  
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+There's a lot of work to do still, but you can see where this is going. See the issues for more info.  
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests.  
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/landongrindheim/phonewords.
-
 
 ## License
 
